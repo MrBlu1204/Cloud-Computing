@@ -7,7 +7,7 @@ int main(){
     scanf("%d",&p);
     int arr[p][6];
     //arr[p][0]=Process
-    int arrival; //arr[p][1]=Arrival Time
+    //arr[p][1]=Arrival Time
     //arr[p][2]=Burst Time
     //arr[p][3]=Completion Time
     //arr[p][4]=Turn Around Time
@@ -73,5 +73,14 @@ int main(){
         }
         printf("\n");
     }
+
+    //Calculating Average Turn Around Time
+    int avgTAT=0;
+    int avgWT=0;
+    for(int i=0;i<p;i++){
+        avgTAT=arr[i][4];
+        avgWT=arr[i][5];
+    }
+    printf("\tAverage Turn Around Time = %d\n\tAverage Waiting Time =%d\n",avgTAT/p,avgWT/p);
 
 }
